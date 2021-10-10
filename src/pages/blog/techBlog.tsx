@@ -11,41 +11,32 @@ export default function TechBlog({data}){
     const [blogFlag, setblogFlag] = useState("all")
     const intl = useIntl()
  
-    const onClickChangeLife = (()=>{
-        if(blogFlag=="MyLife"){
+    const onClickChangeTech = (()=>{
+        if(blogFlag=="Tech"){
             setblogFlag("all")
         }else{
-         setblogFlag("MyLife")
+         setblogFlag("Tech")
         }
     })
-    const onClickChangeKagoshima = (()=>{
-         if(blogFlag=="Kagoshima"){
+    const onClickChangeAtCoder = (()=>{
+         if(blogFlag=="AtCoder"){
              setblogFlag("all")
          }
          else{
-         setblogFlag("Kagoshima")
+         setblogFlag("AtCoder")
          }
          
      })
-     const onClickChangeTechStudy = (()=>{
-         if(blogFlag=="TechStudy"){
+     const onClickChangComputerScience = (()=>{
+         if(blogFlag=="ComputerScience"){
              setblogFlag("all")
          }
          else{
-         setblogFlag("TechStudy")
+         setblogFlag("ComputerScience")
          }
          
      })
-     const onClickChangeHobby = (()=>{
-         if(blogFlag=="Hobby"){
-             setblogFlag("all")
-         }
-         else{
-         setblogFlag("Hobby")
-         }
-         
-     })
-
+     
   return(
   <>
   <Seo title="Ko-rin Yamada Blog" description='元医師、現エンジニアのKo-rin YamadaのBlog Siteです。エンジニアや鹿児島生活に関して書いています。'/>
@@ -61,9 +52,9 @@ export default function TechBlog({data}){
         </Flex>
         <Box minH='90vh' maxWidth={{xl:"1280px",}} ml='auto' mr='auto' pt='40px' pl='24px' pr='24px'  bg='white' shadow='sm'> 
             <Flex w='100%' ml='auto' mr='auto'>
-                    <Button _hover={{bg:'blue.100'}} fontSize={{xl:"16px",lg:"16px",md:"16px",sm:"14px",base:"12px"}}  bgColor={blogFlag=="MyLife"?'blue.100':"gray.50"}  h='100%' minH='42px' w='33%' onClick={onClickChangeLife}>{intl.formatMessage({ id: "blogTag5" })}</Button>
-                    <Button _hover={{bg:'blue.100'}} fontSize={{xl:"16px",lg:"16px",md:"16px",sm:"14px",base:"12px"}} bgColor={blogFlag=="Kagoshima"?'blue.100':"gray.50"}   h='100%' minH='42px' w='33%' onClick={onClickChangeKagoshima}>{intl.formatMessage({ id: "blogTag6" })}</Button>
-                    <Button _hover={{bg:'blue.100'}} fontSize={{xl:"16px",lg:"16px",md:"16px",sm:"14px",base:"12px"}} bgColor={blogFlag =='"TechStudy"'?'blue.100':"gray.50"}    h='100%' minH='42px' w='33%' onClick={onClickChangeTechStudy}>{intl.formatMessage({ id: "blogTag7" })}</Button>
+                    <Button _hover={{bg:'blue.100'}} fontSize={{xl:"16px",lg:"16px",md:"16px",sm:"14px",base:"12px"}}  bgColor={blogFlag=="MyLife"?'blue.100':"gray.50"}  h='100%' minH='42px' w='33%' onClick={onClickChangeTech}>{intl.formatMessage({ id: "blogTag5" })}</Button>
+                    <Button _hover={{bg:'blue.100'}} fontSize={{xl:"16px",lg:"16px",md:"16px",sm:"14px",base:"12px"}} bgColor={blogFlag=="Kagoshima"?'blue.100':"gray.50"}   h='100%' minH='42px' w='33%' onClick={onClickChangeAtCoder}>{intl.formatMessage({ id: "blogTag6" })}</Button>
+                    <Button _hover={{bg:'blue.100'}} fontSize={{xl:"16px",lg:"16px",md:"16px",sm:"14px",base:"12px"}} bgColor={blogFlag =='"TechStudy"'?'blue.100':"gray.50"}    h='100%' minH='42px' w='33%' onClick={onClickChangComputerScience}>{intl.formatMessage({ id: "blogTag7" })}</Button>
             </Flex>
             <Box mt='40px'>
                 <Wrap  ml='auto' mr='auto' w='100%'>

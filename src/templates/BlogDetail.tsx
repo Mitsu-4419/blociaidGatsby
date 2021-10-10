@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { Box, Text,Flex, Image, Tag,TagLabel } from "@chakra-ui/react";
 import {changeDateFormat} from '../js/changeDateFormat.js'
 import Seo from "../components/seo"
+import "../styles/style.css"
 
 const ProjectDetails = ({data}) => {
   const [date, setDate] = useState("")
