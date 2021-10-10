@@ -19,7 +19,7 @@ const ProjectDetails = ({data}) => {
       <Seo title={data.blog.title} image={data.blog.mainThumbnail.file.url?data.blog.mainThumbnail.file.url:''}/>
       {typeof(data.blog.title) ==="string"?
       <Flex w='100%' justify='center' mt='80px' mb='100px'>
-        <Box maxW='750px'>
+        <Box maxW='760px' bg='white' pl='5' pr='5'>
           <Flex justify='center' w='100%'>
             <Text fontSize='15px' color='red'>{date}</Text>
           </Flex>
@@ -43,7 +43,7 @@ const ProjectDetails = ({data}) => {
             />
           </Flex>
           <Box color='gray.900' fontSize={{xl:"20", lg:"20", md:"20", sm:"15", base:"13"}} mt='4rem' mb='4rem' lineHeight={{xl:"10", lg:"10", md:"10", sm:"8", base:"6"}} ml={{base:"12px"}} mr={{base:"12px"}}>
-            <div dangerouslySetInnerHTML={{ __html: data.blog.content.childMarkdownRemark.html }} />
+            <Text dangerouslySetInnerHTML={{ __html: data.blog.content.childMarkdownRemark.html }} />
           </Box>
         </Box>
       </Flex>

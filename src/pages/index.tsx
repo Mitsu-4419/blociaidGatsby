@@ -1,10 +1,11 @@
 import React, {memo, useEffect, useState} from "react"
-import { Box, Text,Flex, AspectRatio} from "@chakra-ui/react";
+import { Box, Text,Flex, AspectRatio,Image} from "@chakra-ui/react";
 
 import Seo from "../components/seo"
 import { RadarChart } from "../js/RadarChart.js";
-import topMovie from '../media/topPage3.mp4';
+// import topMovie from '../media/topPage3.mp4';
 import FadeIn from 'react-fade-in';
+import Surgeon from "../images/surgeon.png"
 
 const IndexPage = memo(() => {
   // const [fadeinFlag, setfadeinFlag]= useState(false)
@@ -18,14 +19,15 @@ const IndexPage = memo(() => {
     <Box bgColor='white' pb='100' >
       <Flex w='95%' h={{xl:"400px",lg:"400px",md:"350px",sm:"300px",base:"280px"}} mr='auto' ml='auto'  justify='center' alignItems='center'>
           <Box w={{xl:"280px",lg:"280px",md:"240px",sm:"220px",base:"200px"}} >
-            <AspectRatio maxW="400px" ratio={3 / 3}>
-            <video
+            {/* <AspectRatio maxW="400px" ratio={3 / 3}> */}
+            {/* <video
                 title="topPageVideo"
                 src={topMovie}
                 playsInline
                 muted
-              />
-            </AspectRatio>
+              /> */}
+              <Image maxW={{lg:"280px",md:"250px",sm:"230px",base:"180px"}} src={Surgeon} alt="surgeonFace" />
+            {/* </AspectRatio> */}
           </Box>
       </Flex>
          <FadeIn>
