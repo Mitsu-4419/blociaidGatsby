@@ -6105,11 +6105,6 @@ type ContentfulContentTypeSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
-
 type ContentfulQueryQueryVariables = Exact<{
   language: Maybe<Scalars['String']>;
 }>;
@@ -6129,6 +6124,11 @@ type ContentfulTecjQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { 
       Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
       & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
     )> } };
+
+type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
 type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
   slug: Scalars['String'];
