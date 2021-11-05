@@ -20,7 +20,7 @@ const ProjectDetails = ({data}) => {
       <Seo title={data.blog.title} image={data.blog.mainThumbnail.file.url?data.blog.mainThumbnail.file.url:''}/>
       {typeof(data.blog.title) ==="string"?
       <Flex w='100%' justify='center' mt='80px' mb='100px'>
-        <Box maxW='760px' bg='white' pl='5' pr='5'>
+        <Box maxW='760px' bg='white' pl='5' pr='5' pt='5' pb='5'>
           <Flex justify='center' w='100%'>
             <Text fontSize='15px' color='red'>{date}</Text>
           </Flex>

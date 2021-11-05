@@ -422,6 +422,7 @@ type SitePluginPluginOptions = {
   readonly query: Maybe<Scalars['String']>;
   readonly name: Maybe<Scalars['String']>;
   readonly path: Maybe<Scalars['String']>;
+  readonly siteUrl: Maybe<Scalars['String']>;
   readonly base64Width: Maybe<Scalars['Int']>;
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
@@ -2935,6 +2936,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly query: Maybe<StringQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
+  readonly siteUrl: Maybe<StringQueryOperatorInput>;
   readonly base64Width: Maybe<IntQueryOperatorInput>;
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
@@ -3273,6 +3275,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.query'
   | 'pluginCreator.pluginOptions.name'
   | 'pluginCreator.pluginOptions.path'
+  | 'pluginCreator.pluginOptions.siteUrl'
   | 'pluginCreator.pluginOptions.base64Width'
   | 'pluginCreator.pluginOptions.stripMetadata'
   | 'pluginCreator.pluginOptions.defaultQuality'
@@ -3500,6 +3503,7 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.query'
   | 'pluginOptions.name'
   | 'pluginOptions.path'
+  | 'pluginOptions.siteUrl'
   | 'pluginOptions.base64Width'
   | 'pluginOptions.stripMetadata'
   | 'pluginOptions.defaultQuality'
@@ -6105,6 +6109,11 @@ type ContentfulContentTypeSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
+type usersmitsu4419DesktopblockaidReactsrccomponentsseoJs63159454QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type usersmitsu4419DesktopblockaidReactsrccomponentsseoJs63159454Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
+
 type ContentfulQueryQueryVariables = Exact<{
   language: Maybe<Scalars['String']>;
 }>;
@@ -6124,11 +6133,6 @@ type ContentfulTecjQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { 
       Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
       & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
     )> } };
-
-type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
 type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
   slug: Scalars['String'];
