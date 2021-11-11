@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 import { RadarChart } from "../js/RadarChart.js";
 // import topMovie from '../media/topPage3.mp4';
 import FadeIn from 'react-fade-in';
-import Surgeon from "../images/surgeon.png"
+import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = memo(() => {
   // const [fadeinFlag, setfadeinFlag]= useState(false)
@@ -18,7 +18,7 @@ const IndexPage = memo(() => {
     <Seo title='Home' description="元医師、現エンジニアのKorin Yamada のPortofolio Site, Blog です。"/>
     <Box bgColor='white' pb='100' >
       <Flex w='95%' h={{xl:"400px",lg:"400px",md:"350px",sm:"300px",base:"280px"}} mr='auto' ml='auto'  justify='center' alignItems='center'>
-          <Box w={{xl:"280px",lg:"280px",md:"240px",sm:"220px",base:"200px"}} >
+          <Box w={{xl:"250px",lg:"230px",md:"200px",sm:"200px",base:"150px"}}  h={{xl:"250px",lg:"230px",md:"200px",sm:"200px",base:"150px"}}>
             {/* <AspectRatio maxW="400px" ratio={3 / 3}> */}
             {/* <video
                 title="topPageVideo"
@@ -26,7 +26,8 @@ const IndexPage = memo(() => {
                 playsInline
                 muted
               /> */}
-              <Image w={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} h={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} src={Surgeon} alt="surgeonFace" />
+              {/* w={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} h={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} */}
+              <StaticImage  src="../images/surgeon.png" alt="surgeonFace" />
             {/* </AspectRatio> */}
           </Box>
       </Flex>

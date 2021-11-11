@@ -6180,6 +6180,11 @@ type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | '
 
 type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
 type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
   slug: Scalars['String'];
   language: Maybe<Scalars['String']>;
@@ -6193,10 +6198,5 @@ type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913Query 
       & { readonly childMarkdownRemark: Maybe<Pick<MarkdownRemark, 'html'>> }
     )> }
   )> };
-
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 }
