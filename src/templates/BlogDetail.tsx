@@ -38,9 +38,9 @@ const ProjectDetails = ({data}) => {
           <Flex w='100%' justify='center'>
             <Image
               src={data.blog.mainThumbnail.fluid.src}
-              alt="Thumbnail"
+              alt="tosenkyoThumbnail"
               fit='cover'
-              h={{xl:"450px", lg:"430px", md:"400px", sm:"350px", base:"300px"}}   
+              h={{xl:"470px", lg:"470px", md:"400px", sm:"350px", base:"300px"}}   
             />
           </Flex>
           <Box color='gray.900' fontSize={{xl:"18", lg:"18", md:"18", sm:"15", base:"13"}} mt='4rem' mb='4rem' lineHeight={{xl:"10", lg:"10", md:"10", sm:"8", base:"6"}} ml={{base:"12px"}} mr={{base:"12px"}}>
