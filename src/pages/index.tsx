@@ -30,7 +30,7 @@ const IndexPage = memo(() => {
             {/* </AspectRatio> */}
           </Box>
       </Flex>
-         <FadeIn>
+         {/* <FadeIn> */}
          <Box w='100%' textAlign='center' h='20' mt='10'>
            <Text fontSize={{xl:42,lg:42,md:38, sm:38}} color='gray.700' fontWeight='bold'>Skills</Text>
          </Box>
@@ -45,7 +45,7 @@ const IndexPage = memo(() => {
              <RadarChart chartType='others'/>
            </Box>
          </Flex>
-       </FadeIn>
+       {/* </FadeIn> */}
 
     </Box>
   </>
