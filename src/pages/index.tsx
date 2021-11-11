@@ -26,7 +26,7 @@ const IndexPage = memo(() => {
                 playsInline
                 muted
               /> */}
-              <Image maxW={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} src={Surgeon} alt="surgeonFace" />
+              <Image w={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} h={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} src={Surgeon} alt="surgeonFace" />
             {/* </AspectRatio> */}
           </Box>
       </Flex>
@@ -35,13 +35,13 @@ const IndexPage = memo(() => {
            <Text fontSize={{xl:42,lg:42,md:38, sm:38}} color='gray.700' fontWeight='bold'>Skills</Text>
          </Box>
          <Flex w="95%" mr='auto' ml='auto' justify='center' height={{xl:400, lg:300}} direction={{xl:"row", lg:"row", md:"column", sm:"column", base:"column"}}>
-           <Box m={{xl:'35', lg:'25', md:'35', sm:'35', base:"2"}} w={{xl:"30%", lg:"30%", md:"100%", sm:"100%", base:"100%"}}>
+           <Box m={{xl:'35', lg:'25', md:'35', sm:'35', base:"2"}} w={{xl:"400", lg:"300", md:"350", sm:"300", base:"300"}} h={{xl:"400", lg:"300", md:"350", sm:"300", base:"300"}}>
              <RadarChart chartType='front'/>
            </Box>
-           <Box m={{xl:'35', lg:'25', md:'35', sm:'35',base:"2"}}  w={{xl:"30%", lg:"30%", md:"100%", sm:"100%",base:"100%"}}>
+           <Box m={{xl:'35', lg:'25', md:'35', sm:'35',base:"2"}}  w={{xl:"400", lg:"300", md:"350", sm:"300",base:"300"}} h={{xl:"400", lg:"300", md:"350", sm:"300", base:"300"}}>
              <RadarChart chartType='backend' />
            </Box>
-           <Box m={{xl:'35', lg:'25', md:'35', sm:'35', base:"2"}}  w={{xl:"30%", lg:"30%", md:"100%", sm:"100%", base:"100%"}}>
+           <Box m={{xl:'35', lg:'25', md:'35', sm:'35', base:"2"}}  w={{xl:"400", lg:"300", md:"350", sm:"300", base:"300"}} h={{xl:"400", lg:"300", md:"350", sm:"300", base:"300"}}>
              <RadarChart chartType='others'/>
            </Box>
          </Flex>
