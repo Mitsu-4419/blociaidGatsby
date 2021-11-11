@@ -36,7 +36,7 @@ export const BlogCard: VFC<Props> = memo(props => {
                   alt={tag}
                   m="auto"
               />:<Image
-                  w='100%'
+                  w='400px'
                   h='180px'
                   objectFit="cover"
                   src={imageUrl}

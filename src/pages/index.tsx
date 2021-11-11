@@ -26,7 +26,7 @@ const IndexPage = memo(() => {
                 playsInline
                 muted
               /> */}
-              <Image maxW={{lg:"280px",md:"250px",sm:"230px",base:"180px"}} src={Surgeon} alt="surgeonFace" />
+              <Image maxW={{lg:"250px",md:"230px",sm:"200px",base:"150px"}} src={Surgeon} alt="surgeonFace" />
             {/* </AspectRatio> */}
           </Box>
       </Flex>
