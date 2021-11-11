@@ -31,6 +31,7 @@ export const BlogCard: VFC<Props> = memo(props => {
             <Stack textAlign="start">
               {book?<Image
                   h='180px'
+                  w='130px'
                   objectFit="cover"
                   src={imageUrl}
                   alt={tag}
