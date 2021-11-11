@@ -6113,10 +6113,10 @@ type ContentfulContentTypeSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type usersmitsu4419DesktopblockaidReactsrccomponentsseoJs63159454QueryVariables = Exact<{ [key: string]: never; }>;
+type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type usersmitsu4419DesktopblockaidReactsrccomponentsseoJs63159454Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
+type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
 type ContentfulQueryQueryVariables = Exact<{
   language: Maybe<Scalars['String']>;
@@ -6127,20 +6127,6 @@ type ContentfulQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { read
       Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
       & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
     )> } };
-
-type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
-  slug: Scalars['String'];
-  language: Maybe<Scalars['String']>;
-}>;
-
-
-type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913Query = { readonly blog: Maybe<(
-    Pick<ContentfulBlogHinagataMarkdown, 'id' | 'tag' | 'title' | 'createdAt'>
-    & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>>, readonly file: Maybe<Pick<ContentfulAssetFile, 'url'>> }>, readonly content: Maybe<(
-      Pick<contentfulBlogHinagataMarkdownContentTextNode, 'content'>
-      & { readonly childMarkdownRemark: Maybe<Pick<MarkdownRemark, 'html'>> }
-    )> }
-  )> };
 
 type ContentfulTecjQueryQueryVariables = Exact<{
   language: Maybe<Scalars['String']>;
@@ -6177,6 +6163,20 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
+  slug: Scalars['String'];
+  language: Maybe<Scalars['String']>;
+}>;
+
+
+type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913Query = { readonly blog: Maybe<(
+    Pick<ContentfulBlogHinagataMarkdown, 'id' | 'tag' | 'title' | 'createdAt'>
+    & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>>, readonly file: Maybe<Pick<ContentfulAssetFile, 'url'>> }>, readonly content: Maybe<(
+      Pick<contentfulBlogHinagataMarkdownContentTextNode, 'content'>
+      & { readonly childMarkdownRemark: Maybe<Pick<MarkdownRemark, 'html'>> }
+    )> }
+  )> };
 
 type GatsbyContentfulFixedFragment = Pick<ContentfulFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 

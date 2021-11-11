@@ -40,19 +40,23 @@ export const Header: VFC = memo(() => {
         as="a"
         mr={8}
         _hover={{ cursor: "pointer" }}
-        >
-            <StaticImage
+        > 
+            <Link to='/'>
+                <Flex alignItems='center'>
+                <StaticImage
                 src="../../../images/blockaid_icon_bgnone.png"
                 max-width={50}
                 quality={95}
                 alt="A Gatsby astronaut"
             />
-            <Heading as="h1" fontSize={{ base: "md", md: "xl" }} ml='5'>
+            <Heading as="h1" fontSize={{ base: "md", md: "xl" }} ml='5' display={{lg:'block',md:'none'}}>
                 Ko-rin Yamada
             </Heading>
+                </Flex>
+            </Link>
         </Flex>
         <Spacer></Spacer>
-        <Box display={{xl:"block",lg:"block",md:"none", sm:"none", base:"none"}}>
+        <Box display={{xl:"block",lg:"block",md:"block", sm:"none", base:"none"}}>
             <Flex mr='3' alignItems='center' >
                 <Link to="/">
                     <Button borderRadius='md' ml='1' mr='1' onClick={homeChange} _hover={{bg:'blue.200', color:'white'}} bg={menuFlag=='home'?"blue.500":'blue.50'} color={menuFlag=='home'?"white":'gray.800'}>HOME</Button>
@@ -75,7 +79,7 @@ export const Header: VFC = memo(() => {
                 <Language/>
             </Flex>
         </Box>
-        <Box display={{xl:"none", lg:"none"}}>
+        <Box display={{xl:"none", lg:"none", md:'none'}}>
             <Flex alignItems='center'>
                 <Box  mr='5'>
                     <Language />
