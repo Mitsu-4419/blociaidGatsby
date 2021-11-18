@@ -48,7 +48,7 @@ const ProjectDetails = ({data}) => {
           </Box>
           <Flex w='90%' ml='auto' mr='auto' justify='center'>
             <Link to="/blog">
-                <Text color='blue' fontSize='18px'>blog Top Page へ</Text>
+                <Button borderRadius='md' ml='1' mr='1' bg='blue.400' color='white'>To KodoOji Blog Top</Button>
             </Link>
           </Flex>
         </Box>
