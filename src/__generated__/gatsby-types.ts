@@ -354,6 +354,8 @@ type SitePageContextIntlMessages = {
   readonly prof8_content: Maybe<Scalars['String']>;
   readonly prof9_year: Maybe<Scalars['String']>;
   readonly prof9_content: Maybe<Scalars['String']>;
+  readonly prof11_year: Maybe<Scalars['String']>;
+  readonly prof11_content: Maybe<Scalars['String']>;
   readonly prof10_year: Maybe<Scalars['String']>;
   readonly prof10_content: Maybe<Scalars['String']>;
   readonly prof_certificate: Maybe<Scalars['String']>;
@@ -2869,6 +2871,8 @@ type SitePageContextIntlMessagesFilterInput = {
   readonly prof8_content: Maybe<StringQueryOperatorInput>;
   readonly prof9_year: Maybe<StringQueryOperatorInput>;
   readonly prof9_content: Maybe<StringQueryOperatorInput>;
+  readonly prof11_year: Maybe<StringQueryOperatorInput>;
+  readonly prof11_content: Maybe<StringQueryOperatorInput>;
   readonly prof10_year: Maybe<StringQueryOperatorInput>;
   readonly prof10_content: Maybe<StringQueryOperatorInput>;
   readonly prof_certificate: Maybe<StringQueryOperatorInput>;
@@ -3213,6 +3217,8 @@ type SitePageFieldsEnum =
   | 'context.intl.messages.prof8_content'
   | 'context.intl.messages.prof9_year'
   | 'context.intl.messages.prof9_content'
+  | 'context.intl.messages.prof11_year'
+  | 'context.intl.messages.prof11_content'
   | 'context.intl.messages.prof10_year'
   | 'context.intl.messages.prof10_content'
   | 'context.intl.messages.prof_certificate'
@@ -6123,11 +6129,6 @@ type ContentfulQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { read
       & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
     )> } };
 
-type usersmitsu4419DesktopblockaidReactsrccomponentsseoJs63159454QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type usersmitsu4419DesktopblockaidReactsrccomponentsseoJs63159454Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
-
 type ContentfulTecjQueryQueryVariables = Exact<{
   language: Maybe<Scalars['String']>;
 }>;
@@ -6197,6 +6198,11 @@ type GatsbyContentfulFluid_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio
 type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

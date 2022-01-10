@@ -55,6 +55,7 @@ const ProfilePage = () => {
             </Flex>
             <ProfileText year='prof8-year' content='prof8-content'></ProfileText>
             <ProfileText year='prof9-year' content='prof9-content'></ProfileText>
+            <ProfileText year='prof11-year' content='prof11-content'></ProfileText>
             <ProfileText year='prof10-year' content='prof10-content'></ProfileText>
             <Link to='/blog/aboutme'><Text color='blue'>My Story</Text></Link>
           </VStack>
