@@ -23,11 +23,13 @@ module.exports = {
     {
       resolve:`gatsby-plugin-sitemap`,
       options:{
+        output:`/`,
         excludes:[`/en/blog/sekaisippaizukan/`, `/en/blog/ikyoku/`,`/en/blog/atcoder1/`,`/en/blog/atcoder2/`,`/en/blog/atcoder3/`,`/en/blog/atcoder4/`,`/en/blog/atcoder5/`,`/en/blog/atcoder6/`,`/en/blog/atcoder7/`,`/en/blog/atcoder8/`,`/en/blog/atcoder9/`,`/en/blog/atcoder10/`,`/en/blog/atcoder11/`,`/en/blog/atcoder12/`,`/en/blog/atcoder13/`,
         `/en/blog/atcoder14/`,`/en/blog/atcoder15/`,`/en/blog/atcoder16/`,`/en/blog/atcoder17/`,`/en/blog/atcoder18/`,`/en/blog/atcoder19/`,`/en/blog/atcoder20/`,`/en/blog/atcoder21/`,`/en/blog/atcoder22/`,
         `/en/blog/dfinity/`,`/en/blog/cardiacsurgeon3/`,`/en/blog/cardiacsurgeon2/`,`/en/blog/ctsurgeon/`, `/en/blog/ochiai/`, `/en/blog/tokyogsacademy/`,`/en/blog/rugby_ireland/`, '/en/blog/teidogaikokujin/',
-        `/en/blog/statictest2/`,`/en/blog/statistic/`, `/en/blog/usmle2/`]
-      }
+        `/en/blog/statictest2/`,`/en/blog/statistic/`, `/en/blog/usmle2/`],
+        resolveSiteUrl: () => `https://blockaid.tokyo`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
