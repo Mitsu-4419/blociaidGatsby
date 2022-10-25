@@ -14,12 +14,12 @@ export const Header: VFC = memo(() => {
     const profileChange = () =>{
         setMenuFlag('profile')
     }
-    const worksChange = () =>{
-        setMenuFlag('works')
-    }
-    const blogChange = () =>{
-        setMenuFlag('blog')
-    }
+    // const worksChange = () =>{
+    //     setMenuFlag('works')
+    // }
+    // const blogChange = () =>{
+    //     setMenuFlag('blog')
+    // }
     const contactChange = () =>{
         setMenuFlag('contact')
     }
@@ -64,12 +64,12 @@ export const Header: VFC = memo(() => {
                 <Link to="/profile">
                     <Button borderRadius='md' ml='1' mr='1' onClick={profileChange} _hover={{bg:'blue.200',color:'white'}} bg={menuFlag=='profile'?"blue.500":'blue.50'} color={menuFlag=='profile'?"white":'gray.800'}>PROFILE</Button>
                 </Link>
-                <Link to="/works">
+                {/* <Link to="/works">
                     <Button borderRadius='md' ml='1' mr='1' onClick={worksChange} _hover={{bg:'blue.200',color:'white'}} bg={menuFlag=='works'?"blue.500":'blue.50'} color={menuFlag=='works'?"white":'gray.800'}>WORKS</Button>
                 </Link>
                 <Link to="/blog">
                     <Button borderRadius='md' ml='1' mr='1' onClick={blogChange} _hover={{bg:'blue.200',color:'white'}} bg={menuFlag=='blog'?"blue.500":'blue.50'} color={menuFlag=='blog'?"white":'gray.800'}>BLOG</Button>
-                </Link>
+                </Link> */}
                 <Link to="/contact">
                     <Button borderRadius='md' ml='1' mr='1' onClick={contactChange} _hover={{bg:'blue.200',color:'white'}} bg={menuFlag=='contact'?"blue.500":'blue.50'} color={menuFlag=='contact'?"white":'gray.800'}>CONTACT</Button>
                 </Link>
@@ -102,7 +102,7 @@ export const Header: VFC = memo(() => {
                         PROFILE
                         </MenuItem>
                     </Link>
-                    <Link to="/works">
+                    {/* <Link to="/works">
                         <MenuItem>
                         WORKS
                         </MenuItem>
@@ -111,7 +111,7 @@ export const Header: VFC = memo(() => {
                         <MenuItem>
                         BLOG
                         </MenuItem>
-                    </Link>
+                    </Link> */}
                     <Link to="/contact">
                         <MenuItem>
                         CONTACT
