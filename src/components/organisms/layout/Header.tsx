@@ -102,7 +102,7 @@ export const Header: VFC = memo(() => {
                         PROFILE
                         </MenuItem>
                     </Link>
-                    {/* <Link to="/works">
+                    <Link to="/works">
                         <MenuItem>
                         WORKS
                         </MenuItem>
@@ -111,7 +111,7 @@ export const Header: VFC = memo(() => {
                         <MenuItem>
                         BLOG
                         </MenuItem>
-                    </Link> */}
+                    </Link>
                     <Link to="/contact">
                         <MenuItem>
                         CONTACT
