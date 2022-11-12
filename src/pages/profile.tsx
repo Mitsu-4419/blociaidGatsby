@@ -24,9 +24,9 @@ const ProfilePage = () => {
           </Flex>
       </GridItem>
       <GridItem rowSpan={{xl:34,lg:34,md:33, sm:33,base:33}} colSpan={{xl:2,lg:2,md:1, sm:1, base:1}}></GridItem>
-      <GridItem rowSpan={{xl:20, lg:20, md:8, sm:7,base:7}} colSpan={{xl:11, lg:11, md:32, sm:32,base:32}}  bg='white' >
+      <GridItem rowSpan={{xl:17, lg:17, md:8, sm:5,base:5}} colSpan={{xl:11, lg:11, md:32, sm:32,base:32}}  bg='white' >
         <Flex w='100%' h='100%' justify='center' alignItems='center'>
-            <Box w={{xl:280, lg:250, md:150, sm:150,base:120}}>
+            <Box w={{xl:240, lg:220, md:150, sm:150,base:120}}>
               <StaticImage
                   src="../images/CEOFace.png"
                   quality={95}
@@ -35,7 +35,7 @@ const ProfilePage = () => {
             </Box>
         </Flex>
       </GridItem>
-      <GridItem rowSpan={{xl:20, lg:20, md:16, sm:16,base:19}} colSpan={{xl:19, lg:19, md:32, sm:32,base:32}}  bg='white' >
+      <GridItem rowSpan={{xl:17, lg:17, md:16, sm:14,base:14}} colSpan={{xl:19, lg:19, md:32, sm:32,base:32}}  bg='white' >
         <Flex h='100%' alignItems='center' p='4'>
           <VStack align='start' spacing={{xl:3, lg:2, md:2, sm:2, base:2}} fontSize={{xl:"18", lg:"16", md:"15", sm:"12", base:"10"}}>
             <ProfileText year='prof1-year' content='prof1-content'></ProfileText>
@@ -43,7 +43,7 @@ const ProfilePage = () => {
             <ProfileText year='prof3-year' content='prof3-content'></ProfileText>
             <Flex>
               <Text w='130px'>{intl.formatMessage({ id: "prof4-year" })}</Text>
-              <Text>{intl.formatMessage({ id: "prof4-1-content" })}<br/>{intl.formatMessage({ id: "prof4-2-content" })}<br/>{intl.formatMessage({ id: "prof4-3-content" })}</Text>
+              <Text>{intl.formatMessage({ id: "prof4-1-content" })}<br/>{intl.formatMessage({ id: "prof4-3-content" })}</Text>
             </Flex>
             <ProfileText year='prof5-year' content='prof5-content'></ProfileText>
             <Box mt='10px' mb='10px'>
@@ -57,12 +57,12 @@ const ProfilePage = () => {
             <ProfileText year='prof9-year' content='prof9-content'></ProfileText>
             <ProfileText year='prof11-year' content='prof11-content'></ProfileText>
             <ProfileText year='prof10-year' content='prof10-content'></ProfileText>
-            <Link to='/blog/aboutme'><Text color='blue'>My Story</Text></Link>
+            {/* <Link to='/blog/aboutme'><Text color='blue'>My Story</Text></Link> */}
           </VStack>
         </Flex>
       </GridItem>
-      <GridItem rowSpan={6} colSpan={{xl:18,lg:18,md:19, sm:19, base:19}}  bg='white' p={{xl:"4",lg:"4",md:"2", sm:"1", base:"1"}}>
-        <Box m='2' fontSize={{xl:"20", lg:"18", md:"16", sm:"14", base:"8"}}pl={{xl:"10", lg:"8", md:"6", sm:"4", base:"4"}} pr={{xl:"10", lg:"8", md:"6", sm:"4", base:"4"}}>
+      <GridItem rowSpan={6} colSpan={{xl:16,lg:16,md:16, sm:16, base:16}}  bg='white' p={{xl:"4",lg:"4",md:"2", sm:"1", base:"1"}}>
+        <Box m='2' fontSize={{xl:"16", lg:"16", md:"16", sm:"14", base:"8"}}pl={{xl:"10", lg:"8", md:"6", sm:"4", base:"4"}} pr={{xl:"10", lg:"8", md:"6", sm:"4", base:"4"}}>
           <Text fontWeight={"bold"}>{intl.formatMessage({ id: "prof-certificate" })}</Text>
           <Text>
           {intl.formatMessage({ id: "prof-certificate-detail1" })}<br/>
@@ -71,7 +71,7 @@ const ProfilePage = () => {
         </Box>
       </GridItem>
       <GridItem rowSpan={6} colSpan={{xl:12,lg:12,md:13, sm:13, base:13}}  bg='white' p={{xl:"4",lg:"4",md:"2", sm:"1", base:"1"}}>
-        <Box m='2'fontSize={{xl:"20", lg:"18", md:"16", sm:"10", base:"8"}} pl={{xl:"10", lg:"8", md:"6", sm:"4",base:"4"}} pr={{xl:"10", lg:"8", md:"6", sm:"4", base:"4"}}>
+        <Box m='2'fontSize={{xl:"16", lg:"16", md:"16", sm:"10", base:"8"}} pl={{xl:"10", lg:"8", md:"6", sm:"4",base:"4"}} pr={{xl:"10", lg:"8", md:"6", sm:"4", base:"4"}}>
             <Text fontWeight={"bold"}>{intl.formatMessage({ id: "prof-hobby" })}</Text>
             <Text>{intl.formatMessage({ id: "prof-hobby-detail" })}</Text>
         </Box>

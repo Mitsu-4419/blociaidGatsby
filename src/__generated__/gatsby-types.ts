@@ -342,7 +342,6 @@ type SitePageContextIntlMessages = {
   readonly prof3_content: Maybe<Scalars['String']>;
   readonly prof4_year: Maybe<Scalars['String']>;
   readonly prof4_1_content: Maybe<Scalars['String']>;
-  readonly prof4_2_content: Maybe<Scalars['String']>;
   readonly prof4_3_content: Maybe<Scalars['String']>;
   readonly prof5_year: Maybe<Scalars['String']>;
   readonly prof5_content: Maybe<Scalars['String']>;
@@ -397,6 +396,7 @@ type SitePageContextIntlMessages = {
   readonly blogTag7: Maybe<Scalars['String']>;
   readonly blogLink1: Maybe<Scalars['String']>;
   readonly blogLink2: Maybe<Scalars['String']>;
+  readonly prof4_2_content: Maybe<Scalars['String']>;
 };
 
 type SitePlugin = Node & {
@@ -418,8 +418,8 @@ type SitePlugin = Node & {
 
 type SitePluginPluginOptions = {
   readonly plugins: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsPlugins>>>;
-  readonly excludes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly output: Maybe<Scalars['String']>;
+  readonly excludes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly createLinkInHead: Maybe<Scalars['Boolean']>;
   readonly entryLimit: Maybe<Scalars['Int']>;
   readonly query: Maybe<Scalars['String']>;
@@ -1095,7 +1095,6 @@ type ContentfulBlogHinagataMarkdown = ContentfulReference & ContentfulEntry & No
   readonly node_locale: Scalars['String'];
   readonly title: Maybe<Scalars['String']>;
   readonly postDate: Maybe<Scalars['Date']>;
-  readonly tag: Maybe<Scalars['String']>;
   readonly slug: Maybe<Scalars['String']>;
   readonly book: Maybe<Scalars['Boolean']>;
   readonly tech: Maybe<Scalars['Boolean']>;
@@ -1105,6 +1104,7 @@ type ContentfulBlogHinagataMarkdown = ContentfulReference & ContentfulEntry & No
   readonly createdAt: Maybe<Scalars['Date']>;
   readonly updatedAt: Maybe<Scalars['Date']>;
   readonly sys: Maybe<ContentfulBlogHinagataMarkdownSys>;
+  readonly tag: Maybe<Scalars['String']>;
   /** Returns all children nodes filtered by type contentfulBlogHinagataMarkdownContentTextNode */
   readonly childrenContentfulBlogHinagataMarkdownContentTextNode: Maybe<ReadonlyArray<Maybe<contentfulBlogHinagataMarkdownContentTextNode>>>;
   /** Returns the first child node of type contentfulBlogHinagataMarkdownContentTextNode or null if there are no children of given type on this node */
@@ -1553,7 +1553,6 @@ type Query_contentfulBlogHinagataMarkdownArgs = {
   node_locale: Maybe<StringQueryOperatorInput>;
   title: Maybe<StringQueryOperatorInput>;
   postDate: Maybe<DateQueryOperatorInput>;
-  tag: Maybe<StringQueryOperatorInput>;
   slug: Maybe<StringQueryOperatorInput>;
   book: Maybe<BooleanQueryOperatorInput>;
   tech: Maybe<BooleanQueryOperatorInput>;
@@ -1563,6 +1562,7 @@ type Query_contentfulBlogHinagataMarkdownArgs = {
   createdAt: Maybe<DateQueryOperatorInput>;
   updatedAt: Maybe<DateQueryOperatorInput>;
   sys: Maybe<ContentfulBlogHinagataMarkdownSysFilterInput>;
+  tag: Maybe<StringQueryOperatorInput>;
   childrenContentfulBlogHinagataMarkdownContentTextNode: Maybe<contentfulBlogHinagataMarkdownContentTextNodeFilterListInput>;
   childContentfulBlogHinagataMarkdownContentTextNode: Maybe<contentfulBlogHinagataMarkdownContentTextNodeFilterInput>;
   parent: Maybe<NodeFilterInput>;
@@ -2859,7 +2859,6 @@ type SitePageContextIntlMessagesFilterInput = {
   readonly prof3_content: Maybe<StringQueryOperatorInput>;
   readonly prof4_year: Maybe<StringQueryOperatorInput>;
   readonly prof4_1_content: Maybe<StringQueryOperatorInput>;
-  readonly prof4_2_content: Maybe<StringQueryOperatorInput>;
   readonly prof4_3_content: Maybe<StringQueryOperatorInput>;
   readonly prof5_year: Maybe<StringQueryOperatorInput>;
   readonly prof5_content: Maybe<StringQueryOperatorInput>;
@@ -2914,6 +2913,7 @@ type SitePageContextIntlMessagesFilterInput = {
   readonly blogTag7: Maybe<StringQueryOperatorInput>;
   readonly blogLink1: Maybe<StringQueryOperatorInput>;
   readonly blogLink2: Maybe<StringQueryOperatorInput>;
+  readonly prof4_2_content: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginFilterInput = {
@@ -2935,8 +2935,8 @@ type SitePluginFilterInput = {
 
 type SitePluginPluginOptionsFilterInput = {
   readonly plugins: Maybe<SitePluginPluginOptionsPluginsFilterListInput>;
-  readonly excludes: Maybe<StringQueryOperatorInput>;
   readonly output: Maybe<StringQueryOperatorInput>;
+  readonly excludes: Maybe<StringQueryOperatorInput>;
   readonly createLinkInHead: Maybe<BooleanQueryOperatorInput>;
   readonly entryLimit: Maybe<IntQueryOperatorInput>;
   readonly query: Maybe<StringQueryOperatorInput>;
@@ -3205,7 +3205,6 @@ type SitePageFieldsEnum =
   | 'context.intl.messages.prof3_content'
   | 'context.intl.messages.prof4_year'
   | 'context.intl.messages.prof4_1_content'
-  | 'context.intl.messages.prof4_2_content'
   | 'context.intl.messages.prof4_3_content'
   | 'context.intl.messages.prof5_year'
   | 'context.intl.messages.prof5_content'
@@ -3260,6 +3259,7 @@ type SitePageFieldsEnum =
   | 'context.intl.messages.blogTag7'
   | 'context.intl.messages.blogLink1'
   | 'context.intl.messages.blogLink2'
+  | 'context.intl.messages.prof4_2_content'
   | 'context.intl.routed'
   | 'context.intl.originalPath'
   | 'context.intl.redirect'
@@ -3277,8 +3277,8 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.plugins.name'
   | 'pluginCreator.pluginOptions.plugins.version'
   | 'pluginCreator.pluginOptions.plugins.pluginFilepath'
-  | 'pluginCreator.pluginOptions.excludes'
   | 'pluginCreator.pluginOptions.output'
+  | 'pluginCreator.pluginOptions.excludes'
   | 'pluginCreator.pluginOptions.createLinkInHead'
   | 'pluginCreator.pluginOptions.entryLimit'
   | 'pluginCreator.pluginOptions.query'
@@ -3506,8 +3506,8 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.plugins.pluginOptions.showLineNumbers'
   | 'pluginOptions.plugins.pluginOptions.noInlineHighlight'
   | 'pluginOptions.plugins.pluginFilepath'
-  | 'pluginOptions.excludes'
   | 'pluginOptions.output'
+  | 'pluginOptions.excludes'
   | 'pluginOptions.createLinkInHead'
   | 'pluginOptions.entryLimit'
   | 'pluginOptions.query'
@@ -5093,7 +5093,6 @@ type ContentfulBlogHinagataMarkdownFieldsEnum =
   | 'node_locale'
   | 'title'
   | 'postDate'
-  | 'tag'
   | 'slug'
   | 'book'
   | 'tech'
@@ -5279,6 +5278,7 @@ type ContentfulBlogHinagataMarkdownFieldsEnum =
   | 'sys.contentType.sys.type'
   | 'sys.contentType.sys.linkType'
   | 'sys.contentType.sys.id'
+  | 'tag'
   | 'childrenContentfulBlogHinagataMarkdownContentTextNode'
   | 'childrenContentfulBlogHinagataMarkdownContentTextNode.id'
   | 'childrenContentfulBlogHinagataMarkdownContentTextNode.parent.id'
@@ -5611,7 +5611,6 @@ type ContentfulBlogHinagataMarkdownFilterInput = {
   readonly node_locale: Maybe<StringQueryOperatorInput>;
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly postDate: Maybe<DateQueryOperatorInput>;
-  readonly tag: Maybe<StringQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
   readonly book: Maybe<BooleanQueryOperatorInput>;
   readonly tech: Maybe<BooleanQueryOperatorInput>;
@@ -5621,6 +5620,7 @@ type ContentfulBlogHinagataMarkdownFilterInput = {
   readonly createdAt: Maybe<DateQueryOperatorInput>;
   readonly updatedAt: Maybe<DateQueryOperatorInput>;
   readonly sys: Maybe<ContentfulBlogHinagataMarkdownSysFilterInput>;
+  readonly tag: Maybe<StringQueryOperatorInput>;
   readonly childrenContentfulBlogHinagataMarkdownContentTextNode: Maybe<contentfulBlogHinagataMarkdownContentTextNodeFilterListInput>;
   readonly childContentfulBlogHinagataMarkdownContentTextNode: Maybe<contentfulBlogHinagataMarkdownContentTextNodeFilterInput>;
   readonly parent: Maybe<NodeFilterInput>;
@@ -6119,40 +6119,6 @@ type ContentfulContentTypeSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type ContentfulQueryQueryVariables = Exact<{
-  language: Maybe<Scalars['String']>;
-}>;
-
-
-type ContentfulQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
-      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
-      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
-    )> } };
-
-type ContentfulTecjQueryQueryVariables = Exact<{
-  language: Maybe<Scalars['String']>;
-}>;
-
-
-type ContentfulTecjQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
-      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
-      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
-    )> } };
-
-type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
-  slug: Scalars['String'];
-  language: Maybe<Scalars['String']>;
-}>;
-
-
-type usersmitsu4419DesktopblockaidReactsrctemplatesBlogDetailTsx3493231913Query = { readonly blog: Maybe<(
-    Pick<ContentfulBlogHinagataMarkdown, 'id' | 'tag' | 'title' | 'createdAt'>
-    & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>>, readonly file: Maybe<Pick<ContentfulAssetFile, 'url'>> }>, readonly content: Maybe<(
-      Pick<contentfulBlogHinagataMarkdownContentTextNode, 'content'>
-      & { readonly childMarkdownRemark: Maybe<Pick<MarkdownRemark, 'html'>> }
-    )> }
-  )> };
-
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -6179,6 +6145,16 @@ type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+type ContentfulQueryQueryVariables = Exact<{
+  language: Maybe<Scalars['String']>;
+}>;
+
+
+type ContentfulQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
+      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
+      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
+    )> } };
+
 type GatsbyContentfulFixedFragment = Pick<ContentfulFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyContentfulFixed_tracedSVGFragment = Pick<ContentfulFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -6198,6 +6174,30 @@ type GatsbyContentfulFluid_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio
 type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type ContentfulTecjQueryQueryVariables = Exact<{
+  language: Maybe<Scalars['String']>;
+}>;
+
+
+type ContentfulTecjQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
+      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
+      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
+    )> } };
+
+type usersMitsu44DocumentsblociaidGatsbysrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
+  slug: Scalars['String'];
+  language: Maybe<Scalars['String']>;
+}>;
+
+
+type usersMitsu44DocumentsblociaidGatsbysrctemplatesBlogDetailTsx3493231913Query = { readonly blog: Maybe<(
+    Pick<ContentfulBlogHinagataMarkdown, 'id' | 'tag' | 'title' | 'createdAt'>
+    & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>>, readonly file: Maybe<Pick<ContentfulAssetFile, 'url'>> }>, readonly content: Maybe<(
+      Pick<contentfulBlogHinagataMarkdownContentTextNode, 'content'>
+      & { readonly childMarkdownRemark: Maybe<Pick<MarkdownRemark, 'html'>> }
+    )> }
+  )> };
 
 type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 

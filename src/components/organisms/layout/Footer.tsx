@@ -13,7 +13,7 @@ export const Footer: VFC = memo(() => {
         bg="blue.800"
         justify="center"
         padding={{ base: 3, md: 5 }}
-        h={{ xl:"180px", lg:"180px", md: "140px", sm:"140px", base:"70px"}}
+        minH="180px"
     >
         <VStack>
             <Flex justify='center' mt='auto' mb='auto' w={{xl:"50%",lg:"50%",md:"50%",sm:"50%", base:"40%"}}>

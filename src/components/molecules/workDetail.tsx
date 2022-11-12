@@ -1,5 +1,5 @@
 import React, { memo, VFC } from 'react';
-import { Box,Text, Heading, Flex,Link,Image   } from "@chakra-ui/react"
+import { Box,Text, Flex,Link,Image,VStack , Center  } from "@chakra-ui/react"
 import { useIntl } from "gatsby-plugin-intl"
 
 type Props = {
@@ -19,35 +19,46 @@ export const WorkDetail: VFC<Props> = memo(props => {
 
   return (
     <>
-       <Box w='90%' mr='auto' ml='auto' mt='40px' mb='40px' pt='30px'>
-            <Flex justify='start' w='50%'>
+    <Box w='100%'>
+       <Box w="100%"
+           
+            bg="white"
+            borderRadius="10px"
+            shadow="l">
+            {/* <Flex justify='start' w='50%'>
                 <Heading fontSize={{xl:"4xl",lg:"4xl",md:"3xl", sm:"3xl",base:"2xl"}}>{intl.formatMessage({ id: workYear })}</Heading>
-            </Flex>
-            <Flex w='100%'  mt='10' direction={{xl:"row", lg:"row", md:"column", sm:"column", base:"column"}}>
-                <Flex  w={{xl:"50%", lg:"50%", md:"100%", sm:"100%", base:"100%"}} justify='center' alignItems='center'>
-                    <Link href={link} isExternal>
-                        <Image
-                            src={imageUrl}
-                            alt={imageAlt}
-                            width={220}
-                            quality={95} 
-                        />
-                    </Link>
-                </Flex>
-                <Box  w={{xl:"50%", lg:"50%", md:"100%", sm:"100%",base:"100%"}} bg='gray.100' p='5' mt={{md:"20px", sm:'20px',base:"10px"}} fontSize={{md:"18px",base:"13px"}}>
-                    
-                    {
-                        intl.formatMessage({ id: workContent }).split('\n').map((str, index)=>{
-                            return <Text key={index}>{str}<br /></Text>
-                        }) 
-                        }
-                    
-                    <Box mt='10px'>
-                        <Text>{intl.formatMessage({ id: workTech1 })}：</Text>
-                        <Text>{intl.formatMessage({ id: workTech2 })}</Text>
+            </Flex> */}
+            <VStack>
+                    <Box  w={{xl:"43%", lg:"43%", md:"100%", sm:"100%", base:"100%"}} justify='center'>
+                        <Link href={link} isExternal>
+                        <Box ml="auto" mr="auto">
+                            <Image
+                                src={imageUrl}
+                                alt={imageAlt}
+                                width={200}
+                                height={200}
+                                margin="auto"
+                                quality={95} 
+                            />
+                            </Box>
+                        </Link>
+                        
                     </Box>
-                </Box>
-            </Flex>
+                    <Box  w={{xl:"1000%", lg:"100%", md:"100%", sm:"100%",base:"100%"}} bg='gray.100' p='2' mt={{md:"20px", sm:'20px',base:"10px"}} fontSize={{md:"13px",base:"13px"}}>
+                        
+                        {
+                            intl.formatMessage({ id: workContent }).split('\n').map((str, index)=>{
+                                return <Text key={index}>{str}<br /></Text>
+                            }) 
+                            }
+                        
+                        <Box mt='10px'>
+                            <Text>{intl.formatMessage({ id: workTech1 })}：</Text>
+                            <Text fontWeight={600}>{intl.formatMessage({ id: workTech2 })}</Text>
+                        </Box>
+                    </Box>
+            </VStack>
+        </Box>
         </Box>
     </>
   );
