@@ -50,7 +50,7 @@
     "work-main-tech6":"React, TypeScript, Gatsby.js, Contentful",
     "work7-year":"2021",
     "work7-content":"In 2021, I created a prototype in a medical startup. We read binary data from the device and processed it in python. We created a local application that displays the results on the front page after applying machine learning.",
-    "work-main-tech7":"React, Typscript, Django, python, faastAPI, electron",
+    "work-main-tech7":"React, Typscript, Django, python, faastAPI, electron,Github, Docker",
     "work8-year":"2022",
     "work8-content":"2022~ I am working as a DataScientist in a web-based company. I use python to analyze corporate logs using ml,NLP and statistics and propose some marketing measures. I also create tools to visualize user behavior logs.",
     "work-main-tech8":"Python, Dash, 統計, AWS",
