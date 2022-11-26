@@ -51,7 +51,7 @@
     "work7-content":"2021年は医療系startupでプロトタイプの作成をしました。デバイスからバイナリーデータを読み込んで、pythonで処理。機械学習にかけて結果をフロントで表示させるローカルアプリを作成いたしました。",
     "work-main-tech7":"React, Typscript, Django, python, faastAPI, electron",
     "work8-year":"2022年",
-    "work8-content":"2022年~Web系企業でデータサイエンティストとして働いています。企業のログをpythonを使いml,統計を使って解析し施策を提案しています。ユーザーの行動ログを可視化するようなツールも作成しています。",
+    "work8-content":"2022年~Web系企業でデータサイエンティストとして働いています。企業のログをpythonを使いml,統計,自然言語処理を使って解析し施策を提案しています。ユーザーの行動ログを可視化するようなツールも作成しています。",
     "work-main-tech8":"Python, Dash, 統計, AWS",
     "contact1":"Medical DX や,その他なんでも",
     "contact2":"気軽にご連絡ください！",
