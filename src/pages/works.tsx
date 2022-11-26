@@ -53,6 +53,16 @@ const WorkPage = () => {
             <WorkDetail workYear="work6-year" imageUrl={blockaid} imageAlt='blockaid' workContent="work6-content" workTech1="work-main-tech" workTech2="work-main-tech6" link=""/>
           </WrapItem>
           </Box>
+          <Box w={{xl:"44%", lg:"44%", md:"44%", sm:"99%",base:"99%"}} p='2'>
+          <WrapItem mx="auto">
+            <WorkDetail workYear="work7-year" imageUrl="" imageAlt='blockaid' workContent="work7-content" workTech1="work-main-tech" workTech2="work-main-tech7" link=""/>
+          </WrapItem>
+          </Box>
+          <Box w={{xl:"44%", lg:"44%", md:"44%", sm:"99%",base:"99%"}} p='2'>
+          <WrapItem mx="auto">
+            <WorkDetail workYear="work8-year" imageUrl="" imageAlt='blockaid' workContent="work8-content" workTech1="work-main-tech" workTech2="work-main-tech8" link=""/>
+          </WrapItem>
+          </Box>
             {/* <WorkDetail workYear="work7-year" imageUrl={question} imageAlt='question' workContent="work7-content" workTech1="work-main-tech" workTech2="work-main-tech7" link=""/> */}
         </Wrap>
     </Box>

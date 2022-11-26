@@ -385,6 +385,9 @@ type SitePageContextIntlMessages = {
   readonly work7_year: Maybe<Scalars['String']>;
   readonly work7_content: Maybe<Scalars['String']>;
   readonly work_main_tech7: Maybe<Scalars['String']>;
+  readonly work8_year: Maybe<Scalars['String']>;
+  readonly work8_content: Maybe<Scalars['String']>;
+  readonly work_main_tech8: Maybe<Scalars['String']>;
   readonly contact1: Maybe<Scalars['String']>;
   readonly contact2: Maybe<Scalars['String']>;
   readonly blogTag1: Maybe<Scalars['String']>;
@@ -2902,6 +2905,9 @@ type SitePageContextIntlMessagesFilterInput = {
   readonly work7_year: Maybe<StringQueryOperatorInput>;
   readonly work7_content: Maybe<StringQueryOperatorInput>;
   readonly work_main_tech7: Maybe<StringQueryOperatorInput>;
+  readonly work8_year: Maybe<StringQueryOperatorInput>;
+  readonly work8_content: Maybe<StringQueryOperatorInput>;
+  readonly work_main_tech8: Maybe<StringQueryOperatorInput>;
   readonly contact1: Maybe<StringQueryOperatorInput>;
   readonly contact2: Maybe<StringQueryOperatorInput>;
   readonly blogTag1: Maybe<StringQueryOperatorInput>;
@@ -3248,6 +3254,9 @@ type SitePageFieldsEnum =
   | 'context.intl.messages.work7_year'
   | 'context.intl.messages.work7_content'
   | 'context.intl.messages.work_main_tech7'
+  | 'context.intl.messages.work8_year'
+  | 'context.intl.messages.work8_content'
+  | 'context.intl.messages.work_main_tech8'
   | 'context.intl.messages.contact1'
   | 'context.intl.messages.contact2'
   | 'context.intl.messages.blogTag1'
@@ -6119,6 +6128,45 @@ type ContentfulContentTypeSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
+type ContentfulQueryQueryVariables = Exact<{
+  language: Maybe<Scalars['String']>;
+}>;
+
+
+type ContentfulQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
+      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
+      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
+    )> } };
+
+type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
+
+type ContentfulTecjQueryQueryVariables = Exact<{
+  language: Maybe<Scalars['String']>;
+}>;
+
+
+type ContentfulTecjQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
+      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
+      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
+    )> } };
+
+type usersmitsu4419DesktopBlociaidblociaidGatsbysrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
+  slug: Scalars['String'];
+  language: Maybe<Scalars['String']>;
+}>;
+
+
+type usersmitsu4419DesktopBlociaidblociaidGatsbysrctemplatesBlogDetailTsx3493231913Query = { readonly blog: Maybe<(
+    Pick<ContentfulBlogHinagataMarkdown, 'id' | 'tag' | 'title' | 'createdAt'>
+    & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>>, readonly file: Maybe<Pick<ContentfulAssetFile, 'url'>> }>, readonly content: Maybe<(
+      Pick<contentfulBlogHinagataMarkdownContentTextNode, 'content'>
+      & { readonly childMarkdownRemark: Maybe<Pick<MarkdownRemark, 'html'>> }
+    )> }
+  )> };
+
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -6145,16 +6193,6 @@ type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-type ContentfulQueryQueryVariables = Exact<{
-  language: Maybe<Scalars['String']>;
-}>;
-
-
-type ContentfulQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
-      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
-      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
-    )> } };
-
 type GatsbyContentfulFixedFragment = Pick<ContentfulFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyContentfulFixed_tracedSVGFragment = Pick<ContentfulFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -6174,35 +6212,6 @@ type GatsbyContentfulFluid_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio
 type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type ContentfulTecjQueryQueryVariables = Exact<{
-  language: Maybe<Scalars['String']>;
-}>;
-
-
-type ContentfulTecjQueryQuery = { readonly allContentfulBlogHinagataMarkdown: { readonly nodes: ReadonlyArray<(
-      Pick<ContentfulBlogHinagataMarkdown, 'slug' | 'title' | 'createdAt' | 'postDate' | 'tag' | 'book' | 'id'>
-      & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>> }> }
-    )> } };
-
-type usersMitsu44DocumentsblociaidGatsbysrctemplatesBlogDetailTsx3493231913QueryVariables = Exact<{
-  slug: Scalars['String'];
-  language: Maybe<Scalars['String']>;
-}>;
-
-
-type usersMitsu44DocumentsblociaidGatsbysrctemplatesBlogDetailTsx3493231913Query = { readonly blog: Maybe<(
-    Pick<ContentfulBlogHinagataMarkdown, 'id' | 'tag' | 'title' | 'createdAt'>
-    & { readonly mainThumbnail: Maybe<{ readonly fluid: Maybe<Pick<ContentfulFluid, 'src'>>, readonly file: Maybe<Pick<ContentfulAssetFile, 'url'>> }>, readonly content: Maybe<(
-      Pick<contentfulBlogHinagataMarkdownContentTextNode, 'content'>
-      & { readonly childMarkdownRemark: Maybe<Pick<MarkdownRemark, 'html'>> }
-    )> }
-  )> };
-
-type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
